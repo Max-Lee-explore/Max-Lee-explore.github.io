@@ -121,6 +121,7 @@ main {
 .repositories {
     max-width: 1200px;
     margin: 0 auto;
+    scroll-margin-top: 120px;
 }
 
 .repositories h2 {
@@ -337,29 +338,51 @@ footer {
         flex-direction: column;
         min-height: unset;
         height: unset;
-    }
-    .profile-about-left, .profile-about-right {
-        border-radius: 0;
         box-shadow: none;
-        padding: 2rem 1.5rem;
+        border-radius: 0;
+        position: static;
+    }
+    .profile-about-section::before {
+        display: none;
+    }
+    .profile-about-left {
+        width: 100%;
         min-height: unset;
         height: unset;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+        background: linear-gradient(120deg, #e3f0fc 0%, #f5f6fa 100%);
+        position: static;
+        z-index: auto;
+    }
+    .profile-about-left-inner {
+        margin-top: 0 !important;
     }
     .profile-img-wrapper {
         width: 140px;
         height: 140px;
+        margin-bottom: 0;
     }
     .profile-pic.overlap {
         width: 140px;
         height: 140px;
-        left: 50%;
-        transform: translate(-50%, -20px);
+        left: 0;
+        transform: none;
     }
     .profile-about-left h1 {
-        margin-top: 6rem;
+        margin-top: 0;
+        margin-bottom: 0;
         font-size: 1.6rem;
     }
     .profile-about-right {
+        width: 100%;
+        min-height: unset;
+        height: unset;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 1.5rem 1.2rem 2rem 1.2rem;
+        background: #f8fafc;
         justify-content: flex-start;
     }
 }
